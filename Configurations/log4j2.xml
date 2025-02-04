@@ -1,0 +1,18 @@
+<Configuration>
+	<Properties>
+		<Property name="basepath">./Logs/</Property>
+	</Properties>
+	<Appenders>
+		<RollingFile name="file" fileName="${basepath}Expedia.log" filePattern="${basepath}Expedia-%d{MM_dd_yyyy}.log">
+			<Policies>
+				<SizeBasedTriggeringPolicy size="100KB"/>
+			</Policies>
+			<PatternLayout pattern="%d{MM_dd_yyyy_HH_mm_ss_SSS}%-5level %c{1} -%msg%n"/>
+		</RollingFile>
+	</Appenders>
+	<Loggers>
+		<Root level="info">
+			<AppenderRef ref="file"/>
+		</Root>
+	</Loggers>
+</Configuration>
