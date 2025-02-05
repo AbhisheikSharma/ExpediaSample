@@ -1,5 +1,6 @@
 package utilities;
 
+
 import java.io.File;
 import java.io.FileInputStream;
 
@@ -10,7 +11,7 @@ public class DataReaderClass {
 	protected static String testdatafilepath = "./TestData/testdata.xlsx";
 	
 	
-	public static void initializeDataReaderClass() {
+	public DataReaderClass() {
 		File file = new File(testdatafilepath);
 		try {
 			FileInputStream fis = new FileInputStream(file);
@@ -22,7 +23,7 @@ public class DataReaderClass {
 		System.out.println("Connection to Test Data file established");
 	}
 	
-	public static String getData(int sheetindex, int rownum, int colnum) {
+	public String getData(int sheetindex, int rownum, int colnum) {
 		String data = wb.getSheetAt(sheetindex).getRow(rownum).getCell(colnum).getStringCellValue();
 		return data;
 		

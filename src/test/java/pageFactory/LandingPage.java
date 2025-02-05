@@ -3,11 +3,13 @@ package pageFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class LandingPage {
-	private WebDriver driver;
-	public LandingPage() {
-		this.driver=driver;
+	WebDriver driver;
+	public LandingPage(WebDriver ldriver) {
+	this.driver=ldriver;
+	PageFactory.initElements(driver, this);
 	}
 	
 	@FindBy(xpath="//span[text()='Flights']")

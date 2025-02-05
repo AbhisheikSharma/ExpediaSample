@@ -22,8 +22,11 @@
         <version>3.5.2</version>
         <configuration>
           <suiteXmlFiles>
-            <suiteXmlFile>testng.xml</suiteXmlFile>
+            <suiteXmlFile>Runners/${xmlfiles}</suiteXmlFile>
           </suiteXmlFiles>
+          <systemPropertyVariables>
+			<provideAutUrl>${appUrl}</provideAutUrl>
+		  </systemPropertyVariables>
         </configuration>
       </plugin>
 </plugins>

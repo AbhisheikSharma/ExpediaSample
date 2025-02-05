@@ -1,15 +1,8 @@
-<suite name="ExpediaFlightsBooking">
-	
+<suite name="ExpediaFlightsBooking" parallel="tests">
 	<test name = "Flights Booking on Chrome">
 		<parameter name="browserName" value = "chrome"></parameter>
 		<classes>
 			<class name="Expedia.FlightsBookingTests.FlightBookingTest"></class>
-		</classes>
-	</test><test name = "Flights Booking on firefox">
-		<parameter name="browserName" value = "firefox"></parameter>
-		<classes>
-			<class name="Expedia.FlightsBookingTests.FlightBookingTest"></class>
-		</classes>
+		</classes>	
 	</test>
-	
 </suite>
